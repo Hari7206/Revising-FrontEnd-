@@ -1,0 +1,44 @@
+/* so this means linear means in the line of the gradiant  */
+#first{
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(orange , white , green );
+}
+
+/* this means in the circular form  */
+#second{
+    margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    background: radial-gradient(yellow , orange , black);
+}
+
+/* this means in the fomt of the cone where we make the color look like in the form of cone  */
+#third{
+        margin-top: 10px;
+    height: 100px;
+    width: 100px;
+    background: conic-gradient(Violet , indigo , blue , green , yellow , orange , red , Violet);
+}
+/*  here we will add the image of landscape  */
+.landimg{
+    margin-top: 10px;
+    height: 400px;
+    width: 900px;
+    background-image: url(https://img.freepik.com/free-photo/view-3d-car-with-abstract-landscape_23-2151005273.jpg);
+     background-size: cover;
+    /*  so our this cover make the pic perfect by the size of the width it fix the width fully in the screen
+    
+    for the heighth we can use the contain but it can again make different pics repeat many time so we can turn on the no repeat to close that*/
+   
+}
+.horiimg{
+    margin-top: 10px;
+    height: 900px;
+    width: 900px;
+    background-image: url(https://i.pinimg.com/1200x/49/e5/ac/49e5ac74438548554b85b27b17667d93.jpg);
+    background-size: cover;
+
+    /*  so this is how we can maintain our image which is work like the horizontal */
+    background-position:  center  bottom;
+}

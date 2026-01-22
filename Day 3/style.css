@@ -1,0 +1,37 @@
+/*  here we see that how we can download and custom made name of the font  */
+@font-face {
+  font-family: "RustyAttack";
+  src: url("./fonts/rusty-attack.otf") format("opentype");
+}
+
+*{
+    margin: 0;
+    overflow: 0;
+    box-sizing: border-box;
+}
+h1{
+color: aqua;
+background-color: black;
+font-size: 30px;
+
+font-style: italic;
+text-align: center;
+text-transform: uppercase;
+}
+
+/* we use the # for the id */
+#subhead{
+    font-weight: 200;
+color: red;
+ font-family: "RustyAttack";
+}
+/* we use the . for the class */
+#secsubhead{
+color: pink;
+font-family: "RUSTY ATTACK DEMO";
+ font-family: "RustyAttack";
+}
+
+.para{
+color: green;
+}

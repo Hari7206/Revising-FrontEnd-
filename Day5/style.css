@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+   text-align: center;
+}
+.main {
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 200px;
+    width: 70%;
+    border: 2px solid red;
+    display: flex;
+    gap: 10pc;
+
+}
+
+.first {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+}
+
+/* so this is how we can see our position absolate make the box at the top  of the box according to thhier screen it can go anywhere according to the screen even outside parent div 
+so only the left right top bottom only work when we give the position absolute relative sticky  
+*/
+.second {
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    position: absolute;
+    left: 80%;
+
+}
+
+.third {
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+}
+
+/*  here we will see the relative property */
+
+.secondMain {
+    position: relative;
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 200px;
+    width: 70%;
+    border: 2px solid red;
+    display: flex;
+    gap: 10pc;
+}
+
+.sec-first {
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+}
+/*  so as we can see as we give relative to our parent div now it is begin absoulate accroding to its parent div  */
+.sec-second {
+    height: 100px;
+    width: 100px;
+    background-color: brown;
+    position: absolute;
+    left: 80%;
+}
+
+.sec-third {
+    height: 100px;
+    width: 100px;
+    background-color: chartreuse;
+}
+
+/* here we will see the fixed  */
+.outer{
+    height: 10000px;
+    width: 1000px;
+    background: #000;
+}
+.inner{
+    position: fixed;
+    right: 0;
+    top: 50%;
+    height: 1000px;
+    width: 200px;
+    background-color: red;
+}
+
+.stickyParent{
+    height: 1000px;
+    background-color: antiquewhite;
+}
+/* so this move acording to the 0 when it reaach to its div it will stick at the 0th position  */
+.sticky-child1{
+    top: 0;
+    position: sticky;
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+}
+/* and this will stick to the 10% of the top always at the 10%  */
+.sticky-child2{
+    left: 30%;
+    top: 10%;
+    position: sticky;
+    height: 100px;
+    width: 100px;
+    background-color: aquamarine;
+}
+.stickyparent2{
+height: 1000px;
+background-color: rgb(155, 103, 40);
+}

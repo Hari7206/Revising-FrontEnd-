@@ -1,0 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+
+/*  so as we see we use our gird for the big layout to manage them easily we use the simple flex for the simple layout it can manage the both axis at once  */
+/* main {
+    width: 100%;
+  height: 100%;
+  background: #000;
+  display: grid; */
+  /*  so this template columns will decide how many column we want the many we give it the template that many it will create that same for the row */
+  /* grid-template-columns: 100px 100px 100px ;
+  grid-template-rows: 100px 100px 100px; */
+
+  /*  insted of using the px we can also use the fraction also which works on divding in equal accoring to the 100% like 1 is 100% of the divs we have */
+  /* grid-template-columns: 1fr 1fr  1fr;
+  grid-template-rows: 1fr 2fr 1fr; */
+  /*  as we can see it divide the width and height according to the its fraction  */
+
+  /*  also we can use the min max for this  */
+  /* grid-template-columns: 200px  minmax(200px , auto) 100px; */
+  /*  so as we can see it will only shrink to the minimum of the 200px  */
+ /*  so we can use the row and column gaps for the gap if we want and also we can use the grid gap also for the row and column both gap we want  */
+  /* row-gap: 10px;
+}
+.child {
+    background-color: pink;
+    border: 2px solid yellow;
+}
+#child1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+#child5{
+    grid-column-start: 1;
+    grid-column-end: 4;
+} */
+
+main {
+    height: 100%;
+    background-color: black;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: 60px 1fr 1fr 60px;
+
+    grid-template-areas: 'header header header'
+                          'aside b1 b2'
+                          'aside b3 b4'
+                          'fotter fotter fotter';
+               
+}
+header{
+    background-color: purple;
+    grid-area: header;
+}
+.class1 {
+    background-color: yellow;
+    grid-area: b1;
+}
+.class2 {
+    background-color: rgb(143, 96, 35);
+    grid-area: b2;
+   
+
+}
+.class3 {
+    background-color: rgb(187, 37, 179);
+    grid-area: b3;
+}
+.class4 {
+    background-color: rgb(185, 113, 20);
+     grid-area: b4;
+}
+aside {
+    background-color: blue;
+    grid-area: aside;
+}
+footer {
+    grid-area: fotter;
+    background-color: brown;
+}

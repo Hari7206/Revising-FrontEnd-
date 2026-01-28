@@ -1,0 +1,15 @@
+ - so our px pixels are fixed value it depend on the device how much 1px for the device
+ there is no change in the px after the screen change itself so it is fixed
+
+ - percentage (%) this depend on the parent div if its parent div height increase it will increse it self also but if the parent height goes smaller it make itself also smaller 
+ - viewPort-width (vw)  so viewPort widhth is used meams its depend on the on the screen  as soon as our width change of the screen it will shrink or increase itself 
+ - viewPort-Height (vh) same as vw but in height
+ -vmax so our vmax means our viewPort depend on the which is max if the height is max that tinme the size depend on the height if the width is max at that time then it the size will depend on the widthh of that viewPort
+ -vmin is the opposite of the same thing of vmax where our size depend on the minimum size of our height and width 
+
+ - media quary this we can use for the change size according to the different divice here we can tell our code that in this size of screen be like this
+- 1em so this work as according to the size of the parent div like if parent have 20px and we give child 1em so it will be multiplied with the 20px and become 20px
+- 1rem means accoring to the main parent means we can say according to the html size we give it directly to the parent then 1rem means 16px we have to give as per that size 
+
+------------------------------ when to use which --------------------------------------------
+big text that we want depend on the screen we use the vw as it set according to the size of screen

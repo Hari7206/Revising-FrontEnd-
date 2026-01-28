@@ -1,0 +1,54 @@
+@import "button";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+@mixin flexCenter(){
+        display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin button-style($bg-color){
+    background-color: $bg-color;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+}
+main {
+    height: 100%;
+    width: 100%;
+    @include flexCenter();
+    background-color: black;
+    section {
+        height: 50%;
+        width: 50%;
+            @include flexCenter();
+          flex-direction: column;
+        background: white;
+     
+       h1{
+        color: red;
+       }
+    }
+
+}
+
+.class1{
+    @include button-style(blue)
+}
+.red{
+    @include button-style(red)
+}
+
+.green {
+    @include button-istile(green , white);
+}

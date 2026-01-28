@@ -1,0 +1,11 @@
+so in our html our tag like 
+html 
+body 
+section 
+main
+all this use the 16px default value in it so  html is our root element when we use the rem it tottaly depend on the rootelement so its 1rem is equal to the 16px
+
+
+em work on the near rest parent like if 1 em means its nearest ancsostor font-size 
+
+ font-size: clamp(20px , 1vw , 30px); so our clamp take three value minimum then normal value then height value which did not let our value be too long or too short when the size increse so muxh or decrese so much 

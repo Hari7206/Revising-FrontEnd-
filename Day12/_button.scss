@@ -1,0 +1,9 @@
+@mixin button-istile($bg-color , $color){
+    background-color: $bg-color;
+    color: $color;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 50px;
+    color: white;
+}

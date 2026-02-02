@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+body {
+  background: #0b0f1a;
+  color: #e5e7eb;
+  padding: 30px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header p {
+  color: #9ca3af;
+}
+
+.days {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.day-btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid #334155;
+  background: transparent;
+  color: #cbd5f5;
+  cursor: pointer;
+}
+
+.day-btn.active {
+  background: #38bdf8;
+  color: #020617;
+  font-weight: 600;
+}
+
+.content {
+  max-width: 900px;
+  margin: auto;
+  background: #020617;
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid #1e293b;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  color: #38bdf8;
+  margin-bottom: 10px;
+}
+
+.card p,
+.card li {
+  color: #cbd5f5;
+  line-height: 1.6;
+}
+
+pre {
+  background: #020617;
+  padding: 16px;
+  border-radius: 12px;
+  overflow-x: auto;
+  border: 1px solid #1e293b;
+}
+
+code {
+  color: #a5f3fc;
+  font-size: 14px;
+}

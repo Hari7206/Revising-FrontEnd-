@@ -139,3 +139,22 @@ border-radius: 10px;
 .follow button {
       pointer-events: none;
 }
+
+.mute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 3rem;
+    color: white;
+    padding: 10px 15px;
+    z-index: 5;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: rgba(58, 56, 56, 0.452);
+    border-radius: 50%;
+    display: none;
+    transition: all ease-in 2s;
+}
+
+.mute i {
+     pointer-events: none;
+}

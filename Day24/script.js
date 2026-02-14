@@ -8,7 +8,8 @@ const reelsData = [
     likeCount: 8421,
     shareCount: 764,
     commentCount: 219,
-    video: "./video/arav.mp4"
+    video: "./video/arav.mp4",
+      isMuted: true
   },
   {
     username: "itsme_sakshi",
@@ -19,7 +20,8 @@ const reelsData = [
     likeCount: "245000",
     shareCount: "12K",
     commentCount: "4.3K",
-    video: "./video/model.mp4"
+    video: "./video/model.mp4",
+      isMuted: true
   },
   {
     username: "rahul.codes",
@@ -30,7 +32,8 @@ const reelsData = [
     likeCount: 3190,
     shareCount: 410,
     commentCount: 128,
-    video: "./video/rahul.mp4"
+    video: "./video/rahul.mp4",
+      isMuted: true
   },
   {
     username: "neha_sharma21",
@@ -41,7 +44,8 @@ const reelsData = [
     likeCount: "12000",
     shareCount: "84K",
     commentCount: "26K",
-    video: "./video/neha.mp4"
+    video: "./video/neha.mp4",
+      isMuted: true
   },
   {
     username: "devwithrohit",
@@ -52,7 +56,8 @@ const reelsData = [
     likeCount: 9780,
     shareCount: 1200,
     commentCount: 342,
-    video: "./video/rohit.mp4"
+    video: "./video/rohit.mp4",
+      isMuted: true
   },
   {
     username: "travelwithanya",
@@ -63,7 +68,8 @@ const reelsData = [
     likeCount: "67000",
     shareCount: "5.8K",
     commentCount: "2.1K",
-    video: "./video/anya.mp4"
+    video: "./video/anya.mp4",
+      isMuted: true
   },
   {
     username: "vibe_with_adi",
@@ -74,7 +80,8 @@ const reelsData = [
     likeCount: 980,
     shareCount: 120,
     commentCount: 34,
-    video: "./video/adi.mp4"
+    video: "./video/adi.mp4",
+      isMuted: true
   },
   {
     username: "fitnessbyriya",
@@ -85,7 +92,8 @@ const reelsData = [
     likeCount: "430000",
     shareCount: "29K",
     commentCount: "9.7K",
-    video: "./video/fitness.mp4"
+    video: "./video/fitness.mp4",
+      isMuted: true
   },
   {
     username: "techie_naman",
@@ -96,7 +104,8 @@ const reelsData = [
     likeCount: 5600,
     shareCount: 890,
     commentCount: 276,
-    video: "./video/amaan.mp4"
+    video: "./video/amaan.mp4",
+      isMuted: true
   },
   {
     username: "soulful_sana",
@@ -107,7 +116,8 @@ const reelsData = [
     likeCount: "91000",
     shareCount: "7.4K",
     commentCount: "2.8K",
-    video: "./video/sana.mp4"
+    video: "./video/sana.mp4",
+      isMuted: true
   },
   {
     username: "mr_dynamic",
@@ -118,7 +128,8 @@ const reelsData = [
     likeCount: 2400,
     shareCount: 350,
     commentCount: 102,
-    video: "./video/dynamic.mp4"
+    video: "./video/dynamic.mp4",
+      isMuted: true
   },
   {
     username: "fashionwithtara",
@@ -129,7 +140,8 @@ const reelsData = [
     likeCount: "520000",
     shareCount: "36K",
     commentCount: "11K",
-    video: "./video/tara.mp4"
+    video: "./video/tara.mp4",
+      isMuted: true
   },
   {
     username: "codewithhari",
@@ -140,7 +152,8 @@ const reelsData = [
     likeCount: 7321,
     shareCount: 980,
     commentCount: 301,
-    video: "./video/hari.mp4"
+    video: "./video/hari.mp4",
+      isMuted: true
   },
   {
     username: "dailyvibes_krish",
@@ -151,7 +164,8 @@ const reelsData = [
     likeCount: "18000",
     shareCount: "1.6K",
     commentCount: 640,
-    video: "./video/craft.mp4"
+    video: "./video/craft.mp4",
+      isMuted: true
   },
   {
     username: "urban_riya",
@@ -162,7 +176,8 @@ const reelsData = [
     likeCount: 654,
     shareCount: 92,
     commentCount: 21,
-    video: "./video/riyaa.mp4"
+    video: "./video/riyaa.mp4",
+      isMuted: true
   }
 ];
 
@@ -173,7 +188,10 @@ function showData(){
   let sum = ''
 reelsData.forEach(function(dets , idx){
 sum += `      <div class="reels">
-              <video src="${dets.video}"  loop ></video>
+                   <div class="mute" id=${idx}>
+        ${dets.isMuted ? `<i class="ri-volume-mute-line"></i>` : `<i class="ri-volume-up-line"></i>` }
+       </div>
+              <video class="video" src="${dets.video}" autoplay loop  ${dets.isMuted ? 'muted' : ''} data-idx="${idx}"></video>
                 <div class="bottom">
                   <div class="user">
                     <img src="${dets.profile}" alt="">
@@ -208,6 +226,7 @@ sum += `      <div class="reels">
 allRells.innerHTML = sum
 
 }
+
 allRells.addEventListener('click' , function (dets) {
 if(dets.target.classList.contains('like')){
   if (!reelsData[dets.target.id].isLiked) {
@@ -232,7 +251,40 @@ showData()
 }
 
 
+if (dets.target.tagName === 'VIDEO') {
+    const video = dets.target;
+    const idx = video.dataset.idx;
+
+    reelsData[idx].isMuted = !reelsData[idx].isMuted;
+
+    video.muted = reelsData[idx].isMuted;
+    const muteIcon = video.parentElement.querySelector('.mute');
+    muteIcon.style.display = 'block';
+    muteIcon.style.transform = 'translate(-50%, -50%) scale(1)';
+    if (reelsData[idx].isMuted) {
+        muteIcon.innerHTML = `<i class="ri-volume-mute-line"></i>`;
+    } else {
+        muteIcon.innerHTML = `<i class="ri-volume-up-line"></i>`;
+    }
+
+    setTimeout(() => {
+        muteIcon.style.display = 'none';
+    }, 1000); 
+  const allVideos = document.querySelectorAll('.video');
+    allVideos.forEach((v, i) => {
+        if (i != idx) { 
+            v.muted = true;
+            reelsData[i].isMuted = true;
+
+            const otherMuteIcon = v.parentElement.querySelector('.mute');
+            otherMuteIcon.innerHTML = `<i class="ri-volume-mute-line"></i>`;
+        }
+    });
+}
+
+
 })
+
 
 
 

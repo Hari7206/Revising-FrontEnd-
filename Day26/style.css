@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black
+}
+
+@property --rotate {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+}
+
+@keyframes borderCHange {
+    from {
+        --rotate: 0deg;
+    }
+
+    to {
+        --rotate: 360deg;
+    }
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    width: 450px;
+    color: white;
+    box-shadow:
+        0 0 0px white,
+        0 0 0px green;
+
+
+    background: linear-gradient(black) padding-box,
+        conic-gradient(from var(--rotate), white, white, green, green, white) border-box;
+
+    animation: borderCHange 5s;
+    animation-iteration-count: infinite;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0px;
+    animation-timing-function: linear;
+    border: 0px solid rgba(255, 255, 255, 0);
+    animation-play-state: paused;
+}
+
+.box:hover {
+    border-radius: 15px;
+    color: rgb(87, 231, 87);
+    text-shadow: 0 0 30px white,
+        0 0 30px green;
+    border: 5px solid rgba(255, 255, 255, 0);
+    animation-play-state: running;
+    box-shadow:
+        0 0 30px white,
+        0 0 30px green;
+}
+
+.box img {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.box h1 {
+    margin-left: 20px;
+    font-size: 2.2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.box p {
+    /* text-align: center; */
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}

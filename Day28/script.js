@@ -11,7 +11,7 @@ increasePrice() {
 Laptop.increasePrice()
 console.log(Laptop.price);
 
-// so if i need more 10 laptop like this with different data it will increse the code repetition and does not maintain the code reusability so this take to much time and space also so this is not the efficent way to do so 
+// so if i need more 10 laptop like this with different data it will increse the code repetition and does not maintain the code reusability so this take to much time and space also so this is not the efficent way to do soo
 class Employee {
 constructor(name , salary){
     this.name =  name

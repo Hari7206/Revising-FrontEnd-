@@ -147,3 +147,8 @@ function greet(){
 }
 let gret = greet.bind(Data)
 gret()
+
+
+
+
+//  in the class  62 we have stack means the full detial of our error msg  and the name means what type of the error is 

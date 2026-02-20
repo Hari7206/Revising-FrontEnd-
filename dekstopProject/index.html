@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link
+  href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css"
+  rel="stylesheet"
+/>
+    <title>Window Desktop</title>
+</head>
+
+<body>
+    <main>
+        <div class="desktop-icons">
+            <div class="right">
+                <div> <img src="./icons/controlPanel.png " alt="control panel"><span>Control Panel</span></div>
+                <div> <img src="./icons/microEdge.png" alt="microsoft edge"><span>Microsoft Edge</span></div>
+                <div> <img src="./icons/recycle.png" alt="recycle bin">
+                    <span>Recycle Bin </span>
+                </div>
+                <div> <img src="./icons/microsoftWord.png" alt="microsoftWord">
+                    <span> Word</span>
+                </div>
+                <div> <img src="./icons/fireFox.png" alt="firefox">
+                    <span>Firefox</span>
+                </div>
+            </div>
+            <div class="left">
+                <div> <img src="./icons/valorent.jpg" alt="valorant">
+                    <span>VALORANT</span>
+                </div>
+                <div> <img src="./icons/vsCode.png" alt="vsCode">
+                    <span>Visual Studio Code</span>
+                </div>
+            </div>
+        </div>
+
+         <div id="context-menu">
+        <ul>
+           <div class="first">  <li> <i class="ri-apps-line"></i> View</li>
+           <li><i class="ri-sort-asc"></i> Sort by</li>
+        <li><i class="fa-solid fa-arrow-rotate-right"></i> Refresh</li></div>
+
+        <div class="second">
+            <li><i class="ri-file-image-line"></i>Next Desktop Background</li>
+            <li><i class="ri-arrow-go-back-line"></i> Undo Rename</li>
+            <li><i class="ri-add-circle-line"></i>New</li>
+        </div>
+        <div class="third">
+            <li><i class="ri-tv-2-line"></i> Display Setting</li>
+            <li> <i class="ri-brush-line"></i> Personalize</li>
+        </div>
+        <div class="fourth">
+            <li> <i class="ri-home-line"></i> Rename with PowerRename</li>
+            <li><i class="ri-terminal-box-fill"></i>Open in Terminal</li>
+            <li><i class="fa-solid fa-code"></i> open with code</li>
+            <li> <i class="fa-solid fa-angles-down"></i> show more option</li>
+        </div>
+
+        </ul>
+    </div>
+        <div id="start-menu">
+            <div class="all-apps"></div>
+            <div class="pinned-apps"></div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="first">
+            <div id="left">
+                <img src="./icons/window.png" alt="">
+            </div>
+            <div id="center">
+                <div class="serchbar">
+                   <div> <i class="fa-solid fa-magnifying-glass"></i>Search</div>
+                </div>
+  <div class="task-icons">
+                  <div>  <img src="./icons/windowFolder.png" alt=""></div>
+                  <div>  <img src="./icons/hotmail.png" alt=""></div>
+                 <div>   <img src="./icons/valorent.jpg" alt=""></div>
+                   <div> <img src="./icons/vsCode.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="up"><i class="ri-arrow-up-s-line "></i></div>
+            <div class="lang">
+                <h3>ENG <br> IN</h3>
+            </div>
+            <div class="data">
+                <i class="ri-wifi-fill"></i>
+                <i class="ri-volume-up-line"></i>
+                <i class="fa-solid fa-battery-full"></i>
+            </div>
+            <div id="time">
+                <div class="time">12:00</div>
+                <div id="date">19-02-2026</div>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+   
+    <script src="script.js"></script>
+</body>
+
+</html>
